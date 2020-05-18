@@ -1,0 +1,22 @@
+body { counter-reset:c1 c2 c3; }
+
+h1:before {
+  counter-increment:c1;
+  content: counter(c1) "." " ";
+}
+h1 {
+  counter-reset: c2 c3;
+}
+
+h2:before {
+  counter-increment: c2;
+  content:counter(c1) "." counter(c2) "." " ";
+}
+h2 {
+  counter-reset: c3;
+}
+
+h3:before {
+  counter-increment: c3;
+  content: counter(c1) "." counter(c2) "." counter(c3) "." " ";
+}
